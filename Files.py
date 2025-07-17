@@ -20,10 +20,10 @@
 # with open("practise.txt", 'w'):            
 #     f.write(new_data)
 
-count = 0;
-with open("practise.txt", 'r') as f:
-    data = f.read();
-    print(data);
+# count = 0;
+# with open("practise.txt", 'r') as f:
+#     data = f.read();
+#     print(data);
     # num = ""
     # for i in range(len(data)):
     #     if(data[i] == ","):
