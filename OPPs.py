@@ -4,19 +4,19 @@
 
 #Hiding the inplemntion details of a class and only share necassary faetures to the user.
 
-class Car:
-    def __init__(self):
-        self.acc = False
-        self.brk = False
-        self.clutch = False
+# class Car:
+#     def __init__(self):
+#         self.acc = False
+#         self.brk = False
+#         self.clutch = False
 
-    def start(self):
-        self.clutch = True
-        self.acc = True
-        print("Car started...")
+#     def start(self):
+#         self.clutch = True
+#         self.acc = True
+#         print("Car started...")
 
-c_1 = Car()
-c_1.start()
+# c_1 = Car()
+# c_1.start()
 
 
 # 7                   # 🟢 Encapsulation
@@ -41,6 +41,117 @@ c_1.start()
 # print(s1.name, s2.marks)
 # print(s1.Course)
 # print(s1.Branch)
+
+
+# 8                   # 🟢 del keyword
+
+# class Student:
+#     def __init__(self, name):
+#         self.name = name
+
+# s1 = Student("Zuned")
+# print(s1.name)
+# del s1.name
+# print(s1.name)
+
+
+# # 7                   # 🟢 private
+
+# class Account:
+#     def __init__(self, balance, account_password):
+#         self.balance = balance
+#         self.__account_pass = account_password
+
+#     # debit method
+#     def debit(self, amount):
+#         self.balance -= amount
+#         print("Rs.", amount, "was debited")
+
+#     # credits method
+#     def credit(self, amount):
+#         self.balance += amount
+#         print("Rs.", amount, "was Credited")
+
+#     def __get_balance(self): # private
+#         return self.balance
+    
+#     def reset_pass(self):
+#         print(self.__account_pass)
+    
+# acc1 = Account("12345", "abcde")
+# print(acc1.balance)
+# # print(acc1.__account_pass) # this is not allowed
+# print(acc1.reset_pass()) # this is allowed because class me likha hua hai
+
+
+
+# # 9                   # 🟢 Inheritance
+
+# class Car:
+#     @staticmethod
+#     def start():
+#         print("car started...")
+
+#     @staticmethod
+#     def stop():
+#         print("car stoped...")
+
+# class Toyota(Car):
+#     def __init__(self, name):
+#         self.name = name
+
+# car1 = Toyota("Fortuner")
+# car1 = Toyota("Innova")
+
+# print(car1.name)
+# print(car1.start())
+# print(car1.stop())
+
+
+# 9                   # 🟢Types of Inheritance
+
+# a. Single inh. 
+# Upar wala example
+
+
+# b. Multi-level inh.
+
+# class Car:
+#     @staticmethod
+#     def start():
+#         print("car started...")
+
+#     @staticmethod
+#     def stop():
+#         print("car stoped...")
+
+# class Toyota(Car):
+#     def __init__(self, brand):
+#         self.brand = brand
+
+# class Fortuner(Toyota):
+#     def __init__(self, type):
+#         self.type = type
+
+# car1 = Fortuner("Diesel")
+# car1.start()
+
+
+# c. Multiple inh.
+
+class A:
+    var_A = "Welcome to class A"
+    
+class B:
+    var_B = "Welcome to class B"
+
+class C(A, B):
+    var_C = "Welcome to class B"
+
+c1 = C();
+print(c1.var_C)
+print(c1.var_A)
+print(c1.var_B)
 
 
 # # qtn 2:
